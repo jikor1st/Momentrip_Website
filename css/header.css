@@ -1,0 +1,15 @@
+header{
+    /* display:none; */
+}
+/*header 영역*/
+header > .logo{
+    /* position:fixed;
+    top:0;left:0;
+    z-index:1000; */
+    position: fixed;
+    top:39.274%;left:50%;transform:translate(-50%,-50%);
+    z-index:1000;
+}
+header > nav{
+    display:none;
+}

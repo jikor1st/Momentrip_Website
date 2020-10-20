@@ -1,0 +1,147 @@
+*{font-size:18px;font-family: 'Noto Sans KR', sans-serif;color:#263C3C;}
+html,body{width:100%;height:100vh;/* overflow-x: hidden; */}
+body{height:20000px;}
+svg{overflow:visible;vertical-align: top;}
+
+.all_wrap{
+    /* overflow-x:hidden; */
+    width:100%;height:100vh;
+}
+/*fixed 백그라운드*/
+.fixed_background{
+    width:100%;height:100vh;
+    position:fixed;
+    top:0;left:0;
+    /* z-index:100; */
+}
+.fixed_character{
+    width:100%;height:100vh;
+    position:fixed;
+    top:0;left:0;
+    z-index:1000;
+}
+/*메인 앱 화면 flex*/
+.mmm_frame{
+    display:flex;justify-content: center;align-items: center;
+    width:322px;height:680px;
+    background-color:#fff;
+    border:1px solid #DBDBDB;border-radius:35px;
+    filter:drop-shadow(0 2px 15px #00000008);
+    position:absolute;left:50%;top:50%;transform: translate(-50%,-50%);
+}
+.mmm_con{
+    position:relative;
+    width:295px;height:640px;border-radius:30px;
+}
+/*로고 SVG 영역*/
+.mmm_logo{
+    position: absolute;
+    top:18.75%;left:50%;transform:translate(-50%,0);
+    width:61px;height:61px;background-color:#46C6C5;
+    border-radius:15px;display:flex;justify-content: center;align-items: center;
+}
+.logoSvg > g{fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.logoSvg > g > .st0{stroke-width:5.2392;}
+.logoSvg > g > .st1{stroke-width:3.8604;}
+
+/*메인 슬로건*/
+.slogan{
+    font-family: 'GmarketSansMedium';font-size:0.833em;
+    position:absolute;bottom:56.5%;left:50%;transform:translate(-50%,0);
+}
+
+/*설명 explain 영역*/
+.explain01 p{
+    font-size:0.944em;
+}
+
+/*메인 케릭터 및 땅 영역*/
+.main_character_con{
+    width:163px;
+    height:200px;
+    position: absolute;
+    transform-origin:bottom 50%;
+    bottom:22.5%;
+    /* bottom:33%; */
+    left:50%;
+    transform:translateX(-50%) rotateZ(0);
+}
+.main_character {
+    width:100%;
+    position: absolute;
+    bottom:0;left:50%;
+    transform:translate(-50%,-65%)  scale(1.4) rotateZ(-12deg);
+    /* transform:translate(-50%,0)  scale(1) rotateZ(0) rotateX(0); */
+}
+.cha_shadow{
+    position: absolute;
+    left:50%;
+
+    /*as is*/
+    bottom:-15px;
+    transform:translate(-50%,0) scaleX(10);
+    width:15px;
+    height:15px;
+    transform-origin: 50% top;
+    /*to be*/
+    /* bottom:-3.8px; */
+    /* transform:translate(-50%,0) scaleX(18); */
+    /* width:6px; */
+    /* height:6px; */
+    filter:blur(1px);
+    border-radius: 100px;
+    font-size:0;
+    /* width:74.8466%; */
+    
+    
+    background-color:#000000;
+    opacity:35%;
+}
+/*땅*/
+.ground{
+    position: absolute;;
+    bottom:0;left:0;
+    width:100%;
+    height:35px;
+    background-color:#63C7A4;
+}
+.mainGround{
+    position:absolute;
+    bottom:0;left:0;
+    width:149.8239%;
+    height:23.1942vh;
+}
+
+.section_con {
+    position:fixed;top:0;left:0;
+    overflow-x:hidden;
+    width:100%;height:100vh;
+}
+/* main{
+    width:100%;height:100vh;
+    overflow-x:hidden;
+} */
+
+/*section01 제어*/
+.section01{
+    width:100%;height:100vh;
+    /* overflow-x:hidden; */
+    position:relative;
+    /* display:none; */
+}
+.environment_sec01{
+}
+.environment_sec01 > .grass{
+    position:absolute;
+    transform-origin:bottom 50%;
+}
+/*section 환경 이미지 배치*/
+.environment_sec01 > .grass:nth-child(1){bottom:18%;left:28%;transform:rotateZ(-29deg);}
+.environment_sec01 > .grass:nth-child(2){bottom:21%;left:34%;transform:rotateZ(-20deg);}
+.environment_sec01 > .grass:nth-child(3){bottom:18.5%;left:37.1%;transform:rotateZ(-12deg);}
+.environment_sec01 > .grass:nth-child(4){bottom:21%;left:38.9%;transform:rotateZ(-12deg);}
+.environment_sec01 > .grass:nth-child(5){bottom:21%;right:41.2%;transform:rotateZ(0deg);}
+.environment_sec01 > .grass:nth-child(6){bottom:18.5%;right:38.1%;transform:rotateZ(2deg);}
+.environment_sec01 > .grass:nth-child(7){bottom:20.4%;right:35.3%;transform:rotateZ(25deg);}
+.environment_sec01 > .grass:nth-child(8){bottom:19%;right:29.4%;transform:rotateZ(28deg);}
+.environment_sec01 > .grass:nth-child(9){bottom:18.4%;right:23.3%;transform:rotateZ(25deg);}
