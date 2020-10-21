@@ -11,5 +11,21 @@ header > .logo{
     z-index:1000;
 }
 header > nav{
+    position:fixed;top:70px;right:70px;
+    z-index:5000;
+}
+header > nav > ul {
+    cursor:pointer;
+    width:54px;height:54px;
+    border-radius:110px;
+    background-color:#3EC6C6;
+    filter:drop-shadow(0 3px 6px #3ec6c620);
+    position:relative;
+}
+header > nav > ul > img{
+    display:inline-block;
+    position: absolute;top:44%;left:56%;transform: translate(-50%,-50%);
+}
+header > nav > ul > li{
     display:none;
 }
