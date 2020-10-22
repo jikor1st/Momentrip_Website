@@ -177,7 +177,6 @@ section{
     border:1px solid #DBDBDB;
     filter:drop-shadow(0 3px 6px rgba(0, 0, 0, 0.06));
     display:flex;align-items: center;
-    margin-bottom:30px;
     animation:bubble 3s linear infinite;
 }
 .cha_bub > img{margin:0 13px;}
@@ -195,10 +194,7 @@ section{
     left:100%;
     z-index:5;
 }
-.cha02_bub{
-    width:292px;
-}
-
+.cha02_bub{width:292px;margin-bottom:30px;}
 
 .childu{
     width:100%;
@@ -207,12 +203,19 @@ section{
     transform-origin:50% bottom;
 }
 
-.intro_sec02{position: absolute;right:16%;top:31.696%;z-index:4;opacity:0;transform:translateY(100px);}
-.intro_sec02 > dl > dt {font-size:2.000em;font-family: 'GmarketSansMedium';}
-.intro_sec02 > dl > dt > span{color:#46C6C5;font-family: 'GmarketSansBold';}
+.intro_sec02{right:16%;opacity:0;transform:translateY(100px);}
+/* .intro_sec02 > dl > dt {font-size:2.000em;font-family: 'GmarketSansMedium';} */
+/* .intro_sec02 > dl > dt > span{color:#46C6C5;font-family: 'GmarketSansBold';} */
 .intro_sec02 > dl > dd {}
-.intro_sec02 > dl > dd > h4{font-size:1.222em;font-family: 'GmarketSansMedium';margin:52px 0;}
-.intro_sec02 > dl > dd > p{font-size:1em;font-weight:400;width:552px;line-height:1.9em;}
+/* .intro_sec02 > dl > dd > h4{font-size:1.222em;font-family: 'GmarketSansMedium';} */
+.intro_sec02 > dl > dd > p{width:552px;}
+
+.intro_sec{position: absolute;top:31.696%;z-index:4;}
+.intro_sec > dl > dt {font-size:2.000em;font-family: 'GmarketSansMedium';line-height:1.7em;}
+.intro_sec > dl > dt > span{color:#46C6C5;font-family: 'GmarketSansBold';}
+.intro_sec > dl > dd {}
+.intro_sec > dl > dd > h4{font-size:1.222em;font-family: 'GmarketSansMedium';margin-top:52px;}
+.intro_sec > dl > dd > p{font-size:1em;font-weight:400;line-height:1.9em;margin-top:52px;}
 
 /*section03 영역*/
 .background_sec03{}
@@ -221,9 +224,8 @@ section{
 .background_sec03 > .mountain_namsan{bottom:35px;left:100%;}
 .background_sec03 > .plane{bottom:75%;left:50%;}
 
-.cha03_bub{
-    width:430px;
-}
+.cha03_bub{width:430px;margin-bottom:30px;}
+
 .yeahna_con{
     position: absolute;
     bottom:31px;
@@ -231,13 +233,27 @@ section{
     display:block;
     transform-origin:50% bottom;
 }
-.yeahna_con > .grass{position:absolute;bottom:0;z-index:1;}
+.yeahna_con > .grass{position:absolute;bottom:-10px;z-index:1;transform-origin:50% bottom;}
 .yeahna_con > .grass:nth-child(2){left:-35px;transform:rotateZ(-5deg);}
 .yeahna_con > .grass:nth-child(3){left:65px;bottom:-22px;}
 .yeahna_con > .grass:nth-child(4){left:101px;}
-.yeahna{position:relative;z-index:4;}
+.yeahna{position:relative;z-index:4;transform-origin:50% 96%;}
 
+.intro_sec03{left:15%;opacity:0;transform:translateY(100px);}
+.intro_sec03 > dl > dd > p{width:370px;}
 
+.bubCon_sec03{position: absolute;right:8%;top:31.696%;}
+
+.bubCon_sec03 > .bC01{width:430px;opacity:0;position:relative;bottom:-50px;}
+.bubCon_sec03 > .bC02{width:430px;margin:50px 0;opacity:0;position:relative;bottom:-50px;}
+.bubCon_sec03 > .bC03{width:550px;opacity:0;position:relative;bottom:-50px;}
+
+/*section04 순간을 생생하게 간직하는*/
+.mainVideo_intro{
+    position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);opacity:0;
+}
+.mainVideo_intro > h2{font-size:2.222em;font-family: 'GmarketSansMedium';line-height:2em;text-align:center;}
+.mainVideo_intro > h2 > span{color:#46C6C5;font-family: 'GmarketSansBold';}
 
 /*animation*/
 @keyframes bubble{

@@ -3,7 +3,7 @@ console.log('모먼트립 파이팅!');
 /* 요소 불러오기 */
 const section01 = document.querySelector('.section01');
 const section02 = document.querySelector('.section02');
-// const section01 = document.querySelector('.section01');
+const section03 = document.querySelector('.section03');
 // const section01 = document.querySelector('.section01');
 // const section01 = document.querySelector('.section01');
 // const section01 = document.querySelector('.section01');
@@ -11,7 +11,12 @@ const section02 = document.querySelector('.section02');
 const headerLogo = document.querySelector('header > .logo');
 const titleAll = document.querySelector('.titleAll');
 
+/*앱화면 */
 const mmm_frame = document.querySelector('.mmm_frame');
+const mmm_con = document.querySelector('.mmm_con');
+let mmm_El = document.querySelectorAll('.mmm_El');
+const mmm_logo = document.querySelector('.mmm_logo');
+
 
 const mainCharacter_con = document.querySelector('.main_character_con'); // 주인공캐릭터_con
 const mainCharacter = document.querySelector('.main_character'); // 주인공캐릭터
@@ -33,6 +38,17 @@ const plain_sec03 = document.querySelector('.background_sec03 > .plane');
 const yeahna_con = document.querySelector('.yeahna_con');
 const yeahna = document.querySelector('.yeahna');
 const yeahna_bubble = document.querySelector('.cha03_bub');
+//섹션03 말풍선모음
+const bC01 = document.querySelector('.bubCon_sec03 > .bC01');
+const bC02 = document.querySelector('.bubCon_sec03 > .bC02');
+const bC03 = document.querySelector('.bubCon_sec03 > .bC03');
+//섹션 03 설명
+const intro_sec03 = document.querySelector('.intro_sec03');
+// 섹션 03 풀들
+let sec03Grass = document.querySelectorAll('.yeahna_con > .grass');
+
+/*section04 불러오기 */
+const mainVideo_intro = document.querySelector('.mainVideo_intro');
 
 const ground = document.querySelector('.ground'); // 땅
 const ground_dashed = document.querySelector('.ground_dashed'); // 땅 선
@@ -181,7 +197,7 @@ function onScrollWindow(e){
         building[3].style.left = "29.01%";
         building[4].style.left = "35%";
         building[5].style.left = "42.5%";
-
+        // 칠두 크기 키우기
         childu.style.transition = "1s";
         childu.style.transform = "scale(6)";
         childu_con.style.left = "28%";
@@ -251,7 +267,7 @@ function onScrollWindow(e){
         ground.style.backgroundColor = "rgb(99," + colorG + "," + colorB + ")";
         ground_dashed.style.left = 0 - ((scl - 2800)*100/400) + "%";
     }
-    if(scl > 3200){
+    if(scl >= 3200){
         building[0].style.left = "-15%";
         building[1].style.left = "-15%";
         building[2].style.left = "-15%";
@@ -271,26 +287,193 @@ function onScrollWindow(e){
         childu_bubble.style.transition = "0.4s";
         childu_bubble.style.opacity = "100%";
         childu_bubble.style.animation = "bubble 3s linear infinite";
-        //section intro 사라지기
+        //
+        intro_sec02.style.transition = "0.7s";
         intro_sec02.style.opacity = "0";
         intro_sec02.style.transform = "translateY(100px)";
     }
-    if(scl > 3250){
+    if(scl >= 3250){
         section02.style.visibility = "hidden";
     }
     /*section03 영역 제어*/
+    // 남산타워 배경 나오기
+    if(scl >= 2900){
+        section03.style.visibility = "visible";
+    }
     if(scl < 2900){
+        section03.style.visibility = "hidden";
         mountain_namsan.style.left = "100%";
     }
-    if(scl >= 2900 && scl < 4500){
+    if(scl >= 2900 && scl < 4800){
         mountain_namsan.style.transition = "0.1s";
-        mountain_namsan.style.left = 100 - ((scl - 2900) * (100+59.5)/1600) + "%";
-
-        mainCharacter_con.style.transition = "0.1s";
-        mainCharacter_con.style.left = 110 - ((scl - 2900) * (110 - 55)/1600) + "%";
+        mountain_namsan.style.left = 100 - ((scl - 2900) * (100+59.5)/1900) + "%";  
+    } 
+    // 메인케릭터 다시 등장
+    if(scl >= 3400){
+        mainCharacter_con.style.left = "80%";
     }
-    if(scl > 4500){
+    if(scl >= 2850 && scl < 3400){
+        mainCharacter_con.style.transition = "0.1s";
+        mainCharacter_con.style.left = 110 - ((scl - 2850) * (110 - 80)/550) + "%";
+    }
+    
+    if(scl >= 4800){
         mountain_namsan.style.left = "-59.5%";
+        //예나 크기 키우기
+        yeahna.style.transition = "1s";
+        yeahna.style.transform = "scale(5)";
+        yeahna_con.style.left = "48%";
+        // 풀크기 키우기
+        for(var i =0;i < sec03Grass.length;i++){
+            sec03Grass[i].style.transition = "1s";
+            sec03Grass[i].style.transform = "scale(4)";
+            sec03Grass[0].style.transform = "rotateZ(-5deg) scale(4)";
+        }
+        sec03Grass[0].style.marginLeft = "-40%";
+        sec03Grass[1].style.marginLeft = "30%";
+        sec03Grass[2].style.marginLeft = "55%";
+        //예나 말풍선 안보이게
+        yeahna_bubble.style.transition = "0.8s";
+        yeahna_bubble.style.opacity = "0";
+        // yeahna_bubble.style.marginLeft = "-100%";
+        //말풍선 모음 등장
+        bC01.style.transition = "0.7s";
+        bC01.style.opacity = "1";
+        bC01.style.bottom = "0";
+        bC02.style.transition = "0.7s 0.15s";
+        bC02.style.opacity = "1";
+        bC02.style.bottom = "0";
+        bC03.style.transition = "0.7s 0.3s";
+        bC03.style.opacity = "1";
+        bC03.style.bottom = "0";
+        //설명 section03등장
+        intro_sec03.style.transition = "0.7s";
+        intro_sec03.style.opacity = "1";
+        intro_sec03.style.transform = "translateY(0)";
+    }
+    // 예나 등장
+    if(scl >= 3500 && scl < 4800){
+        yeahna_con.style.transition = "0.1s";
+        yeahna_con.style.left = 110 - ((scl - 3500) * (110 - 48)/1300) + "%";
+        yeahna_bubble.style.transition = "0.1s";
+        yeahna_bubble.style.marginLeft = 0 - ((scl - 3500) * 50/1300) + "%";
+    }
+    if(scl < 4800){
+        // 예나 다시 원래 크기로
+        yeahna.style.transition = "0.4s";
+        yeahna.style.transform = "scale(1)";
+        yeahna_bubble.style.transition = "0.8s";
+        yeahna_bubble.style.opacity = "1";
+        // 풀 원래크기로
+        for(var i =0;i < sec03Grass.length;i++){
+            sec03Grass[i].style.transition = "0.4s";
+            sec03Grass[i].style.transform = "scale(1)";
+            sec03Grass[0].style.transform = "rotateZ(-5deg) scale(1)";
+        }
+        sec03Grass[0].style.marginLeft = "0";
+        sec03Grass[1].style.marginLeft = "0";
+        sec03Grass[2].style.marginLeft = "0";
+
+        intro_sec03.style.transition = "0.7s";
+        intro_sec03.style.opacity = "0";
+        intro_sec03.style.transform = "translateY(100px)";
+
+        bC01.style.opacity = "0";
+        bC01.style.bottom = "-50px";
+        bC02.style.opacity = "0";
+        bC02.style.bottom = "-50px";
+        bC03.style.opacity = "0";
+        bC03.style.bottom = "-50px";
+    }
+    /*section03 제거 */
+    if(scl >= 5500){
+        yeahna.style.transition = "0.4s";
+        yeahna.style.transform = "scale(1)";
+        // 풀 원래크기로
+        for(var i =0;i < sec03Grass.length;i++){
+            sec03Grass[i].style.transition = "0.4s";
+            sec03Grass[i].style.transform = "scale(1)";
+            sec03Grass[0].style.transform = "rotateZ(-5deg) scale(1)";
+        }
+        sec03Grass[0].style.marginLeft = "0";
+        sec03Grass[1].style.marginLeft = "0";
+        sec03Grass[2].style.marginLeft = "0";
+
+        intro_sec03.style.transition = "0.7s";
+        intro_sec03.style.opacity = "0";
+        intro_sec03.style.transform = "translateY(100px)";
+
+        
+        bC01.style.opacity = "0";
+        bC01.style.bottom = "-50px";
+        bC02.style.opacity = "0";
+        bC02.style.bottom = "-50px";
+        bC03.style.opacity = "0";
+        bC03.style.bottom = "-50px";
+    }
+    if(scl >= 5500 && scl < 6100){
+        yeahna_con.style.left = 48 - ((scl - 5500) * (110 - 48)/600) + "%";
+        mountain_namsan.style.left = -59.5 - ((scl - 5500) * (100 - 59.5)/600) + "%";
+
+        mainCharacter_con.style.left = 80 - ((scl - 5550) * (80 - 50)/600) + "%";
+    }
+    if(scl >= 6100){
+        yeahna_con.style.left = "-110%";
+        mountain_namsan.style.left = "-100%";
+        mainCharacter_con.style.left = "50%";
+        section03.style.visibility = "hidden";
+    }
+
+    /*section04 영역 */
+    //section04 mmm 세팅
+    if(scl > 3000 && scl < 5000){
+        for(var i=0;i<mmm_El.length;i++){
+            mmm_El[i].style.transition = "0s";
+            mmm_El[i].style.visibility ="visible";
+        }
+        mmm_frame.style.transition = "0s";
+        mmm_frame.style.width = "322px";
+        mmm_frame.style.height = "680px";
+        mmm_frame.style.borderRadius = "35px";
+        mmm_frame.style.border="1px solid #DBDBDB";
+        mmm_frame.style.top = "50%";
+        mmm_frame.style.left = "50%";
+
+        mmm_con.style.transition = "0s";
+        mmm_con.style.width = "295px";
+        mmm_con.style.height = "640px";
+    }
+    if(scl >= 5000){
+        for(var i=0;i<mmm_El.length;i++){
+            mmm_El[i].style.transition = "0s";
+            mmm_El[i].style.visibility ="hidden";
+        }
+        mmm_frame.style.transition = "0s";
+        mmm_frame.style.width = "61px";
+        mmm_frame.style.height = "61px";
+        mmm_frame.style.borderRadius = "15px";
+        mmm_frame.style.border="none";
+        mmm_frame.style.top = "30%";
+        mmm_frame.style.left = "50%";
+        mmm_frame.style.opacity = "0%";
+
+        mmm_con.style.transition = "0s";
+        mmm_con.style.width = "61px";
+        mmm_con.style.height = "61px";
+
+        mmm_El[0].style.visibility="visible";
+    }
+    if(scl < 5700 && scl >= 5000){
+        mmm_frame.style.opacity = "0%";
+        mainVideo_intro.style.opacity = "0%";
+    }
+    if(scl >= 5700 && scl < 6600){
+        mmm_frame.style.opacity = 0 + ((scl - 5700)*100/900) + "%";
+        mainVideo_intro.style.opacity = 0 + ((scl - 5700)*100/900) + "%";
+    }
+    if(scl >= 6600){
+        mmm_frame.style.opacity = "100%";
+        mainVideo_intro.style.opacity = "100%";
     }
 }
 
