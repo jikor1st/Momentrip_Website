@@ -12,11 +12,13 @@ const headerLogo = document.querySelector('header > .logo');
 const titleAll = document.querySelector('.titleAll');
 
 /*앱화면 */
+const fixed_background = document.querySelector('.fixed_background');
 const mmm_frame = document.querySelector('.mmm_frame');
 const mmm_con = document.querySelector('.mmm_con');
 let mmm_El = document.querySelectorAll('.mmm_El');
 const mmm_logo = document.querySelector('.mmm_logo');
-
+const mainVideo = document.querySelector('.mainVideo');
+const mmm_icon = document.querySelector('.icon');
 
 const mainCharacter_con = document.querySelector('.main_character_con'); // 주인공캐릭터_con
 const mainCharacter = document.querySelector('.main_character'); // 주인공캐릭터
@@ -49,6 +51,16 @@ let sec03Grass = document.querySelectorAll('.yeahna_con > .grass');
 
 /*section04 불러오기 */
 const mainVideo_intro = document.querySelector('.mainVideo_intro');
+const mountain_sec04 = document.querySelector('.mountain_sec04');
+
+/*section05 불러오기 */
+const environment_sec05 = document.querySelector('.environment_sec05');
+const ship = document.querySelector('.sea > .ship');
+const sea = document.querySelector('.sea');
+
+/*section06 불러오기 */
+const today = document.querySelector('.today');
+const service01 = document.querySelector('.service01');
 
 const ground = document.querySelector('.ground'); // 땅
 const ground_dashed = document.querySelector('.ground_dashed'); // 땅 선
@@ -155,11 +167,11 @@ function onScrollWindow(e){
         titleAll.style.opacity = 100 - ((scl - 1400) * 100 / 500) + "%";
     }
     /*section01,02 visible 제어 */
-    if(scl > 1500 && scl < 3250){
+    if(scl >= 1500 && scl < 3250){
         section01.style.visibility = "hidden";
         section02.style.visibility = "visible";
     }
-    else if(scl <= 1500){
+    else if(scl < 1500){
         section01.style.visibility = "visible";
         section02.style.visibility = "hidden";
     }
@@ -255,16 +267,22 @@ function onScrollWindow(e){
     /*section02 사라지기 */
     //section 건물 사라지게, 칠두사라지게, 그라운드선 없어지게
     if(scl >= 2800 && scl < 3200){
+        for(var i = 0;i < building.length;i++){
+            building[i].style.transition = "0.1s";
+        }
         building[0].style.left = 5 - ((scl - 2800) * (5+15)/400) + "%";
         building[1].style.left = 8.59 - ((scl - 2800) * (8.59+15)/400) + "%";
         building[2].style.left = 14.89 - ((scl - 2800) * (14.89+15)/400) + "%";
         building[3].style.left = 29.01 - ((scl - 2800) * (29.01+15)/400) + "%";
         building[4].style.left = 35 - ((scl - 2800) * (35+15)/400) + "%";
         building[5].style.left = 42.5 - ((scl - 2800) * (42.5+15)/400) + "%";
+        childu_con.style.transition = "0.15s";
         childu_con.style.left = 28 - ((scl - 2800)* (28 + 20)/400) + "%";
         colorG = 107 + ((scl - 2800) * (199 - 107)/400);
         colorB = 104 + ((scl - 2800) * (164 - 104)/400);
+        ground.style.transition = "0.1s";
         ground.style.backgroundColor = "rgb(99," + colorG + "," + colorB + ")";
+        ground_dashed.style.transition = "0.1s";
         ground_dashed.style.left = 0 - ((scl - 2800)*100/400) + "%";
     }
     if(scl >= 3200){
@@ -360,10 +378,10 @@ function onScrollWindow(e){
     }
     if(scl < 4800){
         // 예나 다시 원래 크기로
-        yeahna.style.transition = "0.4s";
+        yeahna.style.transition = "1s";
         yeahna.style.transform = "scale(1)";
         yeahna_bubble.style.transition = "0.8s";
-        yeahna_bubble.style.opacity = "1";
+        yeahna_bubble.style.opacity = "100%";
         // 풀 원래크기로
         for(var i =0;i < sec03Grass.length;i++){
             sec03Grass[i].style.transition = "0.4s";
@@ -387,8 +405,10 @@ function onScrollWindow(e){
     }
     /*section03 제거 */
     if(scl >= 5500){
-        yeahna.style.transition = "0.4s";
+        yeahna.style.transition = "0.5s";
         yeahna.style.transform = "scale(1)";
+        yeahna_bubble.style.transition = "0.4s";
+        yeahna_bubble.style.opacity = "100%";
         // 풀 원래크기로
         for(var i =0;i < sec03Grass.length;i++){
             sec03Grass[i].style.transition = "0.4s";
@@ -412,12 +432,14 @@ function onScrollWindow(e){
         bC03.style.bottom = "-50px";
     }
     if(scl >= 5500 && scl < 6100){
+        yeahna_con.style.transition = "0.1s";
         yeahna_con.style.left = 48 - ((scl - 5500) * (110 - 48)/600) + "%";
         mountain_namsan.style.left = -59.5 - ((scl - 5500) * (100 - 59.5)/600) + "%";
 
         mainCharacter_con.style.left = 80 - ((scl - 5550) * (80 - 50)/600) + "%";
     }
     if(scl >= 6100){
+        yeahna_con.style.transition = "0.1s";
         yeahna_con.style.left = "-110%";
         mountain_namsan.style.left = "-100%";
         mainCharacter_con.style.left = "50%";
@@ -426,11 +448,15 @@ function onScrollWindow(e){
 
     /*section04 영역 */
     //section04 mmm 세팅
+    if(scl <= 3000){
+        mmm_logo.style.top = "18.75%";
+    }
     if(scl > 3000 && scl < 5000){
         for(var i=0;i<mmm_El.length;i++){
             mmm_El[i].style.transition = "0s";
             mmm_El[i].style.visibility ="visible";
         }
+        fixed_background.style.zIndex = "-1";
         mmm_frame.style.transition = "0s";
         mmm_frame.style.width = "322px";
         mmm_frame.style.height = "680px";
@@ -438,6 +464,14 @@ function onScrollWindow(e){
         mmm_frame.style.border="1px solid #DBDBDB";
         mmm_frame.style.top = "50%";
         mmm_frame.style.left = "50%";
+        mmm_frame.style.transform = "translate(-50%,-50%)";
+        mmm_frame.style.backgroundColor = "#ffffff";
+
+        mmm_logo.style.top = "50%";
+        mmm_logo.style.backgroundColor = "#46C6C5";
+
+        mainVideo.style.visibilty = "hidden";
+        mainVideo.style.opacity = "0%";
 
         mmm_con.style.transition = "0s";
         mmm_con.style.width = "295px";
@@ -448,6 +482,7 @@ function onScrollWindow(e){
             mmm_El[i].style.transition = "0s";
             mmm_El[i].style.visibility ="hidden";
         }
+        mmm_El[1].style.visibility="visible";
         mmm_frame.style.transition = "0s";
         mmm_frame.style.width = "61px";
         mmm_frame.style.height = "61px";
@@ -456,24 +491,301 @@ function onScrollWindow(e){
         mmm_frame.style.top = "30%";
         mmm_frame.style.left = "50%";
         mmm_frame.style.opacity = "0%";
+        mmm_frame.style.transform = "translate(-50%,0)";
 
         mmm_con.style.transition = "0s";
         mmm_con.style.width = "61px";
         mmm_con.style.height = "61px";
 
-        mmm_El[0].style.visibility="visible";
+        mainVideo.style.visibilty = "visible";
+        mainVideo.style.opacity = "0%";
     }
     if(scl < 5700 && scl >= 5000){
         mmm_frame.style.opacity = "0%";
         mainVideo_intro.style.opacity = "0%";
     }
     if(scl >= 5700 && scl < 6600){
+        mmm_frame.style.transition = "0.1s";
         mmm_frame.style.opacity = 0 + ((scl - 5700)*100/900) + "%";
+        mainVideo_intro.style.transition = "0.1s";
         mainVideo_intro.style.opacity = 0 + ((scl - 5700)*100/900) + "%";
     }
     if(scl >= 6600){
         mmm_frame.style.opacity = "100%";
         mainVideo_intro.style.opacity = "100%";
+    }
+    if(scl < 5550){
+        mountain_sec04.style.left = "100%";
+    }else if(scl >= 8000){
+        mountain_sec04.style.left = "0%";
+    }
+    if(scl >= 5550 && 8000){
+        mountain_sec04.style.left = 100 - ((scl - 5550)*100/(8000-5550)) + "%";
+    }
+    // 영상으로 바뀌게끔 시작
+    if(scl > 5000 && scl < 7000){
+        fixed_background.style.zIndex = "-1";
+        mmm_frame.style.transition = "0.1s ease";
+        mmm_frame.style.width = "61px";
+        mmm_frame.style.height = "61px";
+        mmm_frame.style.top = "30%";
+        mmm_frame.style.borderRadius = "15px";
+        mmm_con.style.transition = "0.1s ease";
+        mmm_con.style.width = "61px";
+        mmm_con.style.height = "61px";
+        mmm_con.style.borderRadius = "15px";
+    }
+    // 메인 영상 나오기
+    if(scl >= 6800 && scl < 7400){
+        mainVideo_intro.style.opacity = 100 - ((scl - 6800)*100/600) + "%";
+    }
+    if(scl >= 7400){
+        mainVideo_intro.style.transition = "0.1s";
+        mainVideo_intro.style.opacity = "0%";
+    }
+    if(scl >= 7000 && scl < 8500){
+        fixed_background.style.zIndex = "3000";
+        mmm_frame.style.transition = "0.15s ease";
+        // mmm_frame.style.width = "calc(61px + (100% - 61px))";
+        mmm_frame.style.width = "calc(61px + (" + ((scl-7000) *100/1500) + "% ))";
+        mmm_frame.style.height = "calc(61px + (" + ((scl-7000) *100/1500) + "vh))";
+        mmm_frame.style.backgroundColor = "#3EC6C6";
+        mmm_frame.style.top = 30 - ((scl - 7000)*30/1500) + "%";
+        mmm_frame.style.borderRadius = 15 - ((scl - 7000)*(0-15)/1500) + "px";
+        mmm_con.style.transition = "0.15s ease";
+        mmm_con.style.width = "calc(61px + (" + ((scl-7000) *100/1500) + "%))";
+        mmm_con.style.height = "calc(61px + (" + ((scl-7000) *100/1500) + "vh))";
+        mmm_con.style.borderRadius = 15 - ((scl - 7000)*(0-15)/1500) + "px";
+
+        mmm_logo.style.backgroundColor = "unset";
+        mainVideo.style.visibility = "visible";
+        mainVideo.style.opacity = 0 + (((scl - 7000)*100/1500)) + "%";
+    }
+    if(scl >= 8500){
+        mmm_frame.style.transition = "0.1s";
+        mmm_frame.style.width = "100%";
+        mmm_frame.style.height = "100vh";
+        mmm_frame.style.top = "0%";
+        mmm_frame.style.borderRadius = "0px";
+
+        mmm_con.style.transition = "0.1s ease";
+        mmm_con.style.width = "100%";
+        mmm_con.style.height = "100vh";
+        mmm_con.style.borderRadius = "0px";
+
+        mainVideo.style.opacity = "100%";
+        mainVideo.style.visibility = "visible";
+    }
+    // 메인 영상 지우기
+    if(scl >= 9500 && scl < 10500){
+        fixed_background.style.zIndex = "3000";
+        mmm_frame.style.transition = "0.15s ease";
+        let mfc = 100 - ((scl-9500)*100/1000);
+        mmm_frame.style.width = "calc(" + mfc + "% + 61px)";
+        mmm_frame.style.height = "calc(" + mfc + "vh + 61px)";
+        mmm_frame.style.backgroundColor = "#3EC6C6";
+        mmm_frame.style.top = 0 + ((scl - 9500)*37/1000) + "%";
+        mmm_frame.style.borderRadius = 0 + ((scl - 9500)*15/1000) + "px";
+        mmm_con.style.transition = "0.15s ease";
+        mmm_con.style.width = "calc(" + mfc + "% + 61px)";
+        mmm_con.style.height = "calc(" + mfc + "vh + 61px)";
+        mmm_con.style.borderRadius = 0 + ((scl - 9500)*15/1000) + "px";
+
+        mmm_logo.style.backgroundColor = "unset";
+
+        mainVideo.style.visibility = "visible";
+        mainVideo.style.opacity = 100 - (((scl - 9500)*100/1000)) + "%";
+    }
+    if(scl >= 10500){
+        mmm_frame.style.width = "61px";
+        mmm_frame.style.height = "61px";
+        mmm_frame.style.top = "37%";
+        mmm_con.style.width = "61px";
+        mmm_con.style.height = "61px";
+
+        mmm_frame.style.borderRadius = "15px";
+        mmm_con.style.borderRadius = "15px";
+        mainVideo.style.opacity = "0";
+        mainVideo.style.visibility = "hidden";
+    }
+    //모먼트립이 필요한 사람들 "끝"
+    /*모먼트립과 함께 여행을 시작해 보세요 "시작" */
+    if(scl < 7000){
+        titleAll.style.transition = "0s";
+        titleAll.innerHTML = "<span>모먼트립</span>이 필요한 사람들은?";
+        titleAll.style.opacity = "0%";
+        titleAll.style.top = "50%";
+    }
+    if(scl >= 10100 && scl < 10600){
+        titleAll.innerHTML = "<span>모먼트립</span>과 함께 여행을 시작해 보세요";
+        titleAll.style.transition = "0.1s";
+        titleAll.style.opacity = 0 + ((scl - 10100)*100/500) + "%";
+        titleAll.style.top = "50%";
+    }
+    if(scl >= 10600 && scl < 11000){
+        mmm_frame.style.opacity = 100 - ((scl - 10600)*100/400) + "%";
+    }
+    if(scl >= 11000){
+        mmm_frame.style.opacity = "0";
+    }
+    if(scl >= 10600){
+        titleAll.style.opacity = "100%";
+    }
+    if(scl < 10000){
+    }
+    /*바다배경 나오기 */
+    if(scl >= 10000 && scl < 14000){
+        environment_sec05.style.visibilty = "visible";
+        environment_sec05.style.transition = "0.1s";
+        environment_sec05.style.left = 70 - ((scl - 10000)*(70+230)/4000) + "%";
+        ship.style.transition = "0.1s";
+        ship.style.left = 100 - ((scl - 10000)*(100+100)/4000) + "%";
+    }
+    if(scl < 11200){
+        sea.style.transition = "0.1s";
+        sea.style.height = "82px";
+    }
+    if(scl >= 11200 && scl < 14000){
+        sea.style.transition = "0.1s";
+        sea.style.height = 82 - ((scl - 11200)*82/(14000-11200)) + "px";
+    }
+    if(scl >= 14000){
+        sea.style.transition = "0.1s";
+        sea.style.height = "0px";
+    }
+    /*바다나오기 */
+    if(scl < 8600){
+        sea.style.visibility = "hidden";
+        environment_sec05.style.left = "100%";
+        environment_sec05.style.visibilty = "hidden";
+    }
+    if(scl >= 8600){
+        sea.style.visibility = "visible";
+    }
+    // 모먼트립과 함께 여행을 떠나보세요 글씨 사라지게
+    
+    if(scl >= 11200 && 11800){
+        titleAll.style.transition = "0.1s";
+        titleAll.style.opacity = 100 - ((scl - 11200)*100/(11800-11200)) + "%";
+    }
+
+    /*section 06* 01 여행 기록 추가 시작*/
+
+    /*사전 mmm_frame 세팅 */
+    if(scl >= 11800){
+        for(var i=0;i<mmm_El.length;i++){
+            mmm_El[i].style.transition = "0s";
+            mmm_El[i].style.visibility ="hidden";
+        }
+        mmm_El[3].style.opacity = "0";
+        mmm_El[3].style.visibility = "visible";
+        mmm_frame.style.transition ="0s";
+        mmm_frame.style.width = "77px";
+        mmm_frame.style.height = "77px";
+        mmm_frame.style.top = "50%";
+        mmm_frame.style.left = "60%";
+        mmm_frame.style.backgroundColor = "#ffffff";
+        mmm_frame.style.transform = "translate(-50%,-50%)";
+        mmm_con.style.transition ="0s";
+        mmm_con.style.width = "77px";
+        mmm_con.style.height = "77px";
+        mmm_frame.style.borderRadius = "15px";
+        mmm_con.style.borderRadius = "15px";
+
+        mainVideo.style.visibility = "hidden";
+        
+    }
+    //today 글씨 나오기
+    if(scl < 11800){
+        today.style.opacity = "0";
+    }
+    if(scl >= 11800 && scl < 12400){
+        today.style.transition = "0.1s";
+        today.style.opacity = 0 + ((scl - 11800)*100/(12400-11800)) + "%";
+    }
+    if(scl < 12400){
+        today.style.left = "50%";
+        service01.style.transition = "0.1s";
+        service01.style.left = "60%";
+        service01.style.opacity = "0%";
+    }
+    if(scl >= 12400 && scl < 13400){
+        today.style.trantion = "0.1s";
+        today.style.left = 50 - ((scl - 12400)*(50-25)/1000) + "%";
+        today.style.opacity = 100 - ((scl - 12400)*100/1000) + "%";
+        service01.style.transition = "0.1s";
+        service01.style.left = 60 - ((scl - 12400)*(60-50)/1000) + "%";
+        service01.style.opacity = 0 + ((scl - 12400)*100/1000) + "%";
+
+        mmm_frame.style.transition = "0.1s";
+        mmm_frame.style.opacity = 0 + ((scl - 12400)*100/1000) + "%";
+        mmm_frame.style.left = 60 - ((scl - 12400)*(60-50)/1000) + "%";
+
+        mmm_icon.style.transition = "0";
+        mmm_icon.style.opacity = "100%";
+        mmm_icon.style.visibility = "visible";
+    }
+    if(scl >= 13400){
+        today.style.trantion = "0.1s";
+        today.style.left = "25%";
+        today.style.opacity = "0%";
+        service01.style.transition = "0.1s";
+        service01.style.left = "50%";
+        service01.style.opacity = "100%";
+
+        mmm_icon.style.transition = "0.7s ease";
+        mmm_icon.style.opacity = "100%";
+        mmm_icon.style.visibility = "visible";
+        mmm_frame.style.transition = "0.1s";
+        mmm_frame.style.opacity = "100%";
+        mmm_frame.style.left = "50%";
+    }
+    if(scl <= 11800){
+    }
+    if(scl < 14000){
+       
+    }
+    if(scl < 14000 && scl > 13500){
+        mmm_frame.style.transition = "0.7s ease";
+        mmm_frame.style.width = "77px";
+        mmm_frame.style.height = "77px";
+        mmm_frame.style.top = "50%";
+        mmm_frame.style.backgroundColor = "#ffffff";
+        mmm_frame.style.transform = "translate(-50%,-50%)";
+        mmm_icon.style.transition = "0.7s ease";
+        mmm_con.style.transition = "0.7s ease";
+        mmm_con.style.width = "77px";
+        mmm_con.style.height = "77px";
+        mmm_frame.style.borderRadius = "15px";
+        mmm_con.style.borderRadius = "15px";
+
+        ground.style.transition = "0.7s ease";
+        ground.style.height = "35px";
+    }
+    if(scl >= 14000 && scl < 15000){
+        mmm_frame.style.transition = "0.7s ease";
+        mmm_frame.style.width = "322px";
+        mmm_frame.style.height = "680px";
+        mmm_frame.style.border = "1px solid #DBDBDB";
+        mmm_frame.style.borderRadius = "35px";
+        mmm_icon.style.transition = "0.7s ease";
+        mmm_icon.style.opacity = "0%";
+        mmm_icon.style.visibility = "hidden";
+        mmm_con.style.transition = "0.7s ease";
+        mmm_con.style.borderRadius = "30px";
+        mmm_con.style.width = "295px";
+        mmm_con.style.height = "640px";
+
+        ground.style.transition = "0.7s ease";
+        ground.style.height = "0%";
+    }
+    if(scl >= 13400 && scl < 14000){
+        mainCharacter_con.style.transition = "0.1s";
+        mainCharacter_con.style.left = 50 + ((scl - 13400) * (110 - 50)/600) + "%";
+    }
+    if(scl >= 14000){
+        mainCharacter_con.style.transition = "0.1s";
+        mainCharacter_con.style.left = "110%";
     }
 }
 
