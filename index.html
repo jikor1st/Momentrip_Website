@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes, initial-scale=1.0">
     <title>모먼트립</title>
     <link rel="shortcut icon" type="image/x-icon" href="./asset/momentrip/logo.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/import.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -14,11 +15,32 @@
 <body>
     <div class="all_wrap">
         <header>
+            <div class="all_slide_con">
+                <div class="all_slide"></div>
+            </div>
             <h1 class="logo">
                 <a href="index.html" target="_self" title="모먼트립">
                     <img src="./asset/momentrip/textLogo.png" alt="모먼트립 로고" width="169.72px"/>
                 </a>
             </h1>
+            <h1 class="logo_left_top">
+                <a href="index.html" target="_self" title="모먼트립">
+                    <img src="./asset/momentrip/textLogo.png" alt="모먼트립 로고" width="132.79"/>
+                </a>
+            </h1>
+            <button class="asset_btn">
+                <div class="asset_btn_o"></div>
+                <div class="asset_btn_i"></div>
+            </button>
+            <button class="musicC_btn">
+                <div class="musciC_btn_con">
+                    <div class="music_line music_line01"></div>
+                    <div class="music_line music_line02"></div>
+                    <div class="music_line music_line03"></div>
+                    <div class="music_line music_line04"></div>
+                    <div class="music_muted"></div>
+                </div>
+            </button>
             <nav>
                 <div>
                     <!--뒤에 모션-->
@@ -33,15 +55,222 @@
                     <li><a href="#" target="_self">04. 기록물 제작하기</a></li>
                     <li><a href="#" target="_self">05. 기록물 공유하기</a></li>
                     <li><a href="#" target="_self">잘있어요 모먼트립</a></li>
-                    <img src="./asset/elements/nav.png" width="25.91" height="25.54" alt="네비게이션"/>
+                    <img src="./asset/elements/nav.png" width="19.08" height="18.8" alt="네비게이션"/>
                 </ul>
             </nav>
+            <audio class="background_music" loop src="./asset/audio/MomentripTheme.mp3" type="audio/mp3">기영이 음악</audio>
+            <!-- <iframe src="./asset/audio/Momentrip_Theme.mp3" allow="autoplay" id="audio" style="display:none"></iframe> -->
         </header>
         <main>
+            <div class="start_background">
+                <div class="leaf_start">
+                    <img class="leaf" src="./asset/environment/leaf01.png" alt="leaf" height="26"/>
+                    <img class="leaf" src="./asset/environment/leaf01.png" alt="leaf" height="20"/>
+                    <img class="leaf" src="./asset/environment/leaf01.png" alt="leaf" height="16"/>
+                    <img class="leaf" src="./asset/environment/leaf02.png" alt="leaf" height="14"/>
+                </div>
+                <div class="start_text_con">
+                    <h2 class="start_title">여행을 할 때엔 천천히 주변을 돌아보세요</h2>
+                    <p class="start_text">
+                        모먼트립 웹 사이트는 스크롤로 배경 음악과 함께<br/>
+                        직접 여행을 하는듯하게 서비스를 체험할 수 있습니다.<br/>
+                        스크롤을 천천히 해서 모먼트립과 함께 여행을 떠나보세요.
+                    </p>
+                    <div class="start_btn_con">
+                        <div class="start_btn_motion"></div>
+                        <button class="start_btn">시작하기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="asset_con">
+                <div class="asset_background"></div>
+                <div class="asset_content_con">
+                    <div class="asset_content">
+                        <div class="asset_slider_con">
+                            <div class="asset_slider"></div>
+                        </div>
+                        <div class="asset_header">
+                            <button class="asset_exit">
+                                <div class="asset_exit_btn asset_exit_btn01"></div>
+                                <div class="asset_exit_btn asset_exit_btn02"></div>
+                            </button>
+                        </div>
+                        <h3 class="asset_header_title">모먼트립 아이덴티티</h3>
+                        <div class="asset_logo_con">
+                            <h4 class="asset_title">로고</h4>
+                            <div class="asset_logo">
+                                <img class="asset_logo_grid" src="./asset/designAsset/asset_logo_grid.png" alt="로고그리드" width="114"/>
+                                <img class="asset_logo_text" src="./asset/momentrip/textLogo.png" alt="텍스트로고" width="190.07"/>
+                            </div>
+                            <div class="asset_logo_m_con">
+                                <img class="asset_logo_m" src="./asset/designAsset/asset_logo_m.png" alt="로고형상" width="137.28" height="120.61"/>
+                                <div class="asset_logo_m_inform">
+                                    <h5>풍경을 카메라를 통해서 하나의 기록물로 ,</h5>
+                                    <p>
+                                        <span>Moment</span> 의 <span>Mo</span> 에서 풍경을 연상하여 보다 더 직관적인
+                                        모먼트립의 아이덴티티를 나타낼 수 있도록 하였습니다.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="asset_color_con">
+                            <h4 class="asset_title">컬러</h4>
+                            <div class="asset_color_row_con">
+                                <div class="asset_color_row">
+                                    <div class="asset_color_box">
+                                        <div class="asset_color asset_color01">제이드블루원형</div>
+                                        <div class="asset_color_inform">
+                                            <p class="asset_color_name">제이드블루</p>
+                                            <div class="asset_colorCode_con">
+                                                <p class="asset_hex">#3EC6C6</p>
+                                                <p class="asset_rgb">R62 G198 B198</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="asset_color_box">
+                                        <div class="asset_color asset_color02">인디고블루원형</div>
+                                        <div class="asset_color_inform">
+                                            <p class="asset_color_name">인디고블루</p>
+                                            <div class="asset_colorCode_con">
+                                                <p class="asset_hex">#167197</p>
+                                                <p class="asset_rgb">R22 G113 B151</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="asset_color_box">
+                                        <div class="asset_color asset_color03">제이드그린원형</div>
+                                        <div class="asset_color_inform">
+                                            <p class="asset_color_name">제이드그린</p>
+                                            <div class="asset_colorCode_con">
+                                                <p class="asset_hex">#63CAA7</p>
+                                                <p class="asset_rgb">R99 G202 B167</p>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                                <div class="asset_color_row">
+                                    <div class="asset_color_box">
+                                        <div class="asset_color asset_color04">캔들라이트원형</div>
+                                        <div class="asset_color_inform">
+                                            <p class="asset_color_name">캔들라이트</p>
+                                            <div class="asset_colorCode_con">
+                                                <p class="asset_hex">#FED716</p>
+                                                <p class="asset_rgb">R254 G215 B21</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="asset_color_box">
+                                        <div class="asset_color asset_color05">그레이블랙원형</div>
+                                        <div class="asset_color_inform">
+                                            <p class="asset_color_name">그레이블랙</p>
+                                            <div class="asset_colorCode_con">
+                                                <p class="asset_hex">#636363</p>
+                                                <p class="asset_rgb">R99 G99 B99</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="asset_color_box">
+                                        <div class="asset_color asset_color06">그레이라이트원형</div>
+                                        <div class="asset_color_inform">
+                                            <p class="asset_color_name">그레이라이트</p>
+                                            <div class="asset_colorCode_con">
+                                                <p class="asset_hex">#ECECEC</p>
+                                                <p class="asset_rgb">R236 G236 B236</p>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="asset_font_con">
+                            <h4 class="asset_title">폰트</h4>
+                            <div class="asset_font_box">
+                                <div class="asset_font_row">
+                                    <p class="asset_font_use">제목</p>
+                                    <div class="font_inform">
+                                        <div class="fn"><p class="asset_font_name asset_font_01 afs">Gmarket Sans</p></div>
+                                        <p class="asset_font_family asset_font_01 afs">Medium</p>
+                                    </div>
+                                </div>
+                                <div class="asset_font_row asset_font02_con">
+                                    <p class="asset_font_use">본문</p>
+                                    <div class="font_inform">
+                                        <div class="fn"><p class="asset_font_name asset_font_02 afs">Noto Sans KR</p></div>
+                                        <p class="asset_font_family asset_font_02 asset_font_02M afs">Medium</p>
+                                        <p class="asset_font_family asset_font_02 asset_font_02R afs">Regular</p>
+                                        <p class="asset_font_family asset_font_02 asset_font_02L afs">Light</p>
+                                    </div>
+                                </div>
+                                <div class="asset_font_row asset_font03_con">
+                                    <p class="asset_font_use">숫자</p>
+                                    <div class="font_inform">
+                                        <div class="fn"><p class="asset_font_name asset_font_03 afs">SpoqaHan Sans</p></div>
+                                        <p class="asset_font_family asset_font_03 asset_font_03M afs">Medium</p>
+                                        <p class="asset_font_family asset_font_03 asset_font_03R afs">Regular</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="asset_icon_con">
+                            <h4 class="asset_title">아이콘</h4>
+                            <div class="asset_icon">
+                                <p class="asset_icon_inform"><span>Moment</span> 의 <span>o</span> 를 활용하여 아이콘을 형상화 하였습니다.</p>
+                                <div class="asset_icon_box">
+                                    <div class="asset_icon_row">
+                                        <img class="asset_icon_set" src="./asset/designAsset/asset_icon01.png" alt="아이콘" width="472.62"/>
+                                        <img class="asset_icon_set" src="./asset/designAsset/asset_icon02.png" alt="아이콘" width="472.62"/>
+                                        <img class="asset_icon_set" src="./asset/designAsset/asset_icon03.png" alt="아이콘" width="471.32"/>
+                                    </div>
+                                    <div class="asset_icon_row asset_icon_row02">
+                                        <img class="asset_icon_set" src="./asset/designAsset/asset_icon04.png" alt="아이콘" width="369.24"/>
+                                        <img class="asset_icon_set" src="./asset/designAsset/asset_icon05.png" alt="아이콘" width="370.29"/>
+                                        <img class="asset_icon_set asset_iconreset" src="./asset/designAsset/asset_icon06.png" alt="아이콘" width="479.24"/>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="explain_con">
+                <div class="explain01">
+                    <div class="mouse">
+                        <div class="mouseWheel">스크롤</div>
+                    </div>
+                    <p>마우스를 스크롤해서 모먼트립과 함께 여행하기</p>
+                </div>
+            </div>
+            <div class="bird_con">
+                <img class="bird01" src="./asset/motion/bird/bird01.png" alt="새" width="37"/>
+                <img class="bird02" src="./asset/motion/bird/bird01.png" alt="새" width="24"/>
+                <img class="bird03" src="./asset/motion/bird/bird01.png" alt="새" width="26"/>
+            </div>
+            <div class="bird_con">
+                <img class="bird04" src="./asset/motion/bird/bird01.png" alt="새" width="26"/>
+                <img class="bird05" src="./asset/motion/bird/bird01.png" alt="새" width="20"/>
+            <div class="cloud_con">
+                <img class="cloud01 cloud" src="./asset/background/cloud01.png" alt="구름01" width="139"/>
+                <img class="cloud02 cloud" src="./asset/background/cloud02.png" alt="구름02" width="136"/>
+                <img class="cloud03 cloud" src="./asset/background/cloud01.png" alt="구름03" width="139"/>
+            </div>
+            <div class="plane_con">
+                <img class="plane" src="./asset/background/plane.png" alt="plane" width="150"/>
+            </div>
             <div class="fixed_background">
+                <div class="section07_video">
+                    <video class="background_video" src="./asset/video/video.mp4" loop muted></video>
+                    <div class="video_opacity"></div>
+                    <img class="app02_outVoice" src="./asset/motion/voice/voice_000.png" alt="voice" width="558"/>
+                </div>
                 <div class="mmm_frame">
                     <div class="mmm_con">
-                        <video class="mainVideo mmm_El"src="./asset/video/video.mp4" controls></video>
+                        <!-- <video class="mainVideo mmm_El"src="./asset/video/video.mp4" controls></video> -->
+                        <div class="mainVideo mmm_El">
+                            <iframe class="iframeVideo" width="1920" height="1080" src="https://www.youtube.com/embed/mH8ANhRq86k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <!-- <iframe class="mainVideo mmm_El" width="1920" height="1080" src="https://www.youtube.com/embed/iPN9kuDK5-I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                         <!--앱화면 등등 요소 기입-->
                         <div class="mmm_logo mmm_El">
                             <svg class="logoSvg" x="0px" y="0px" width="42.9px" height="38.3px" viewBox="0 0 42.9 38.3" style="enable-background:new 0 0 42.9 38.3;" >
@@ -52,33 +281,387 @@
                             </svg>
                         </div>
                         <h2 class="slogan mmm_El">순간을 기록하다</h2>
-                        <img class="icon mmm_El" src="./asset/icon/icon01.png" width="75px"/>
+
+                        <img class="icon icon01 mmm_El" src="./asset/icon/icon01.png" width="75px"/>
+                        <img class="icon icon02" src="./asset/icon/icon02.png" width="64px"/>
+
                         <div class="app01">
                             <img src="./asset/app/app01/app01.png" alt="앱01화면_백그라운드" width="295"/>
                             <div class="app01_back">
-                                <img src="./asset/app/app01/app01_before.png" alt="앱01화면_지난" width="295"/>
-                                <div>
-                                    <img src="./asset/app/app01/app01_after.png" alt="앱01화면_지난" width="295"/>
+                                <div class="app01_ui">
+                                    <div class="app01_before app01_ui_in">
+                                        <img src="./asset/app/app01/app01_before.png" alt="앱01화면_지난" width="295"/>
+                                    </div>
+                                    <div class="app01_after app01_ui_in">
+                                        <img src="./asset/app/app01/app01_after.png" alt="앱01화면_지난" width="295"/>
+                                        <div class="app01_profile">
+                                            <img src="./asset/profile/profile02.png" alt="profile02" width="24"/>
+                                            <img src="./asset/profile/profile03.png" alt="profile03" width="24"/>
+                                        </div>
+                                        <div class="app01_start_con">
+                                            <div class="app01_start">
+                                                <img src="./asset/icon/start01.png" alt="startIcon" width="35.39 "/>
+                                                <p>새벽</p>
+                                            </div>
+                                            <div class="app01_start">
+                                                <img src="./asset/icon/start02.png" alt="startIcon" width="30.82"/>
+                                                <p>오전</p>
+                                            </div>
+                                            <div class="app01_start">
+                                                <img src="./asset/icon/start03.png" alt="startIcon" width="21.29"/>
+                                                <p>오후</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide"></div>
                                 </div>
+                                
+                                <div class="calendar">
+                                    <div class="oneRow Row">
+                                        <div class="oRCheck"></div>
+                                        <p>1</p>
+                                        <p>2</p>
+                                    </div>
+                                    <div class="twoRow Row">
+                                        <div class="oRCheck"></div>
+                                        <p class="nowDay">3</p>
+                                        <p class="p">4</p>
+                                        <p class="p">5</p>
+                                        <p class="p">6</p>
+                                        <p class="p">7</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app02">
+                            <div class="app02_con">
+                                <div class="app02_video_con">
+                                    <video class="app02_video"src="./asset/video/video.mp4" loop muted></video>
+                                    <div class="app02_opacity"></div>
+                                </div>
+                                <div class="app02_topEl">
+                                    <img src="./asset/icon/ex_btn.png" alt="x버튼" width="9" height="9"/>
+                                    <p>완료</p>
+                                </div>
+                                <h3 class="app02_Q">이번 여행은<br/>어떤 기분으로 즐기실 건가요?</h3>
+                                <p class="app02_A">답변을 입력해주세요</p>
+                                <p class="app02_AA">바쁜 일상 속에서의 찾는<br/>여유로움을 즐기고 싶어요.</p>
+                                <hr class="app02_L"/>
+                                <div class="app02_btn">입력하기</div>
+                                <div class="app02_pic"></div>
+                                <img class="app02_inVoice"src="./asset/motion/voice/voice_000.png" alt="voice" width="173"/>
+                                <div class="app02_Type">
+                                    <div class="app02_Type_con">
+                                        <div class="app02_TypeEach T_C_select">
+                                            <!--질문-->
+                                            <img class="Q_icon T_I_select" src="./asset/icon/Q_i01.png" alt="질문기록아이콘" width="21.2059"/>
+                                        </div>
+                                        <div class="app02_TypeEach">
+                                            <!--사진-->
+                                            <img class="Q_icon" src="./asset/icon/Q_i02.png" alt="질문기록아이콘" width="21.7264"/>
+                                        </div>
+                                        <div class="app02_TypeEach">
+                                            <!--영상-->
+                                            <img class="Q_icon" src="./asset/icon/Q_i03.png" alt="질문기록아이콘" width="27.8216"/>
+                                        </div>
+                                        <div class="app02_TypeEach">
+                                            <!--녹음-->
+                                            <img class="Q_icon" src="./asset/icon/Q_i04.png" alt="질문기록아이콘" width="26.5155"/>
+                                        </div>
+                                    </div>
+                                    <div class="app02_Circle"></div>
+                                </div>
+                                <p class="app02_time01">00:00</p>
+                                <p class="app02_time02">00:00</p>
+                                <p class="app02_Now">질문</p>
+                            </div>
+                        </div>
+
+                        <img class="app02_record" src="./asset/app/records/records_app02.png" alt="기록물" width="158"/>
+
+                        <div class="app03">
+                            <div class="app03_con">
+                                <div class="app03_top_con">
+                                    <div class="app03_top01">
+                                        <img class="app03_top01_img" src="./asset/app/app03/app03_left.png" alt="뒤로가기" width="4.69" height="9.38"/>
+                                        <p>기록 보관함</p>
+                                        <img class="app03_top01_img" src="./asset/app/app03/app03_zoom.png" alt="검색" width="12.21" height="12.21"/>
+                                    </div>
+                                    <div class="app03_top02">
+                                        <div class="app03_digital">
+                                            <p>디지털</p>
+                                            <hr/>
+                                        </div>
+                                        <div class="app03_analogue">
+                                            <p>아날로그</p>
+                                            <hr/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="app03_main_con">
+                                    <div class="app03_flex_con">
+                                        <div class="app03_flex01">
+                                            <p class="app03_T">제주에서의 한달,<br/>그리고 지금.</p>
+                                            <p class="app03_L">Jeju, Korea</p>  
+                                            <p class="app03_D">2019.04.24-05.26</p>
+                                        </div>
+                                        <div class="app03_flex02">
+                                            <p class="app03_Tm">am 11:20</p>
+                                            <p class="app03_Q">지금 누구와 함께하고 있나요?</p>
+                                        </div>
+                                        <div class="app03_record">
+                                            <video class="app03_video" src="./asset/app/app03/recordsV.mp4" loop muted></video>
+                                        </div>
+                                    </div>
+                                    <div class="app03_main01">
+                                        <div class="app03_main_ex01">
+                                            <div>
+                                                <p>2020년</p>
+                                                <div>
+                                                    <p>최근 기록순</p>
+                                                    <img src="./asset/app/app03/app03_down.png" alt="더보기" width="6.14" height="3.07"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="app03_main_el_con01">
+                                            <div>
+                                                <div class="app03_main_el_flex">
+                                                    <div class="app03_el01"></div>
+                                                    <div class="app03_el01">
+                                                        <img class="app03_el01_img" src="./asset/app/app03/img/app03_img02.png" alt="기록물이미지" width="291"/>
+                                                        <div class="app03_el01_inform">
+                                                            <p class="app03_T">파도 소리에<br/>내 마음이 철렁 ~</p>
+                                                            <p class="app03_L">Pusan, Korea</p>
+                                                            <p class="app03_D">2019.06.22 ~ 06.24</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="app03_main_el_flex">
+                                                    <div class="app03_el01">
+                                                        <img class="app03_el01_img" src="./asset/app/app03/img/app03_img03.png" alt="기록물이미지" width="261"/>
+                                                        <div class="app03_el01_inform">
+                                                            <p class="app03_T">높이 높이 날아라<br/>인천</p>
+                                                            <p class="app03_L">Incheon, Korea</p>
+                                                            <p class="app03_D">2019.06.22 ~ 06.24</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="app03_el01">
+                                                        <img class="app03_el01_img" src="./asset/app/app03/img/app03_img04.png" alt="기록물이미지" width="244"/>
+                                                        <div class="app03_el01_inform">
+                                                            <p class="app03_T">높은 곳에서 느끼는<br/>맑은 공기</p>
+                                                            <p class="app03_L">Yangju, Korea</p>
+                                                            <p class="app03_D">2020.08.12 ~ 08.12</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="app03_main_el_flex">
+                                                    <div class="app03_el01">
+                                                        <img class="app03_el01_img" src="./asset/app/app03/img/app03_img02.png" alt="기록물이미지" width="291"/>
+                                                        <div class="app03_el01_inform">
+                                                            <p class="app03_T">파도 소리에<br/>내 마음이 철렁 ~</p>
+                                                            <p class="app03_L">Jeju, Korea</p>
+                                                            <p class="app03_D">2019.06.22 ~ 06.24</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="app03_el01">
+                                                        <img class="app03_el01_img" src="./asset/app/app03/img/app03_img01.png" alt="기록물이미지" width="261"/>
+                                                        <div class="app03_el01_inform">
+                                                            <p class="app03_T">파도 소리에<br/>내 마음이 철렁 ~</p>
+                                                            <p class="app03_L">Jeju, Korea</p>
+                                                            <p class="app03_D">2019.06.22 ~ 06.24</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="app03_main02">
+                                        <div class="app03_main_ex02">
+                                            <p class="app03_exT">제주에서의 한달, 그리고 지금.</p>
+                                            <p class="app03_exL">Jeju, Korea</p>
+                                            <p class="app03_exD">2019.04.24 - 05.26</p>
+                                            <div class="app03_profile_con">
+                                                <img class="app03_profil01" src="./asset/profile/profile02.png" alt="프로필이미지" width="26" height="26"/>
+                                                <img class="app03_profil01" src="./asset/profile/profile03.png" alt="프로필이미지" width="26" height="26"/> 
+                                            </div>
+                                        </div>
+                                        <div class="app03_main_el_con02">
+                                            <div class="app03_el02">
+                                                <img class="app03_el02_img" src="./asset/app/app03/img/app03_img05.png" alt="기록물이미지" width="218"/>
+                                                <div class="app03_el02_inform">
+                                                    <p class="app03_Tm">pm 2:40</p>
+                                                    <p class="app03_Q">어디를 가고 있나요?</p>
+                                                </div>
+                                            </div>
+                                            <div class="app03_el02">
+                                                <img class="app03_el02_img" src="./asset/app/app03/img/app03_img06.png"  alt="기록물이미지" width="218"/>
+                                                <div class="app03_el02_inform">
+                                                    <p class="app03_Tm">pm 6:10</p>
+                                                    <p class="app03_Q">무엇을 먹고 계신가요?</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img class="app03_leftEL" src="./asset/app/app03/app03_side.png" alt="왼쪽타임라인슬라이드바"height="453.77"/>
+                                    </div>
+                                </div>
+                                <div class="app03_nav">
+                                    <img src="./asset/app/app03/app03_nav.png" alt="마이페이지 네비게이션" width="295"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app04_video_con">
+                            <video class="app04_video" src="./asset/app/app04/app04_create.mp4" loop muted></video>
+                        </div>
+
+                        <div class="pushQ_con">
+                            <div class="pQflex_con">
+                                <div class="pushQ_top">
+                                    <div class="pQL_con">
+                                        <img src="./asset/momentrip/logo.png" alt="로고" width="31" height="31"/>
+                                        <img src="./asset/momentrip/textLogo.png" alt="로고" width="146"/>
+                                    </div>
+                                    <p>1분전</p>
+                                </div>
+                                <p>
+                                    새로운 질문이 도착했습니다.<br/>
+                                    지금의 순간을 바로 기록해보세요!
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--설명 및 인터랙션 설명 기입-->
-                <div class="explain_con">
-                    <div class="explain01">
-                        <div class="mouse">
-                            <div class="mouseWheel">스크롤</div>
+                <div class="app04">
+                    <div class="app04_con">
+                        <img class="app04_temTop" src="./asset/app/app04/app04_templateTop.png" width="640" alt="templateTop"/>
+                        <img class="app04_temLeft" src="./asset/app/app04/app04_templateLeft.png" width="113" alt="templateLeft"/>
+                        <img class="app04_temRight" src="./asset/app/app04/app04_templateRight.png" width="58" alt="templateRight"/>
+                        <p class="app04_zoomP">75%</p>
+                        <div class="app04_btn_con">
+                            <div class="app04_btn app04_btn01">
+                                <div class="app04_btn_this app04_font_this"></div>
+                                <div class="app04_font_btn">
+                                    <div class="app04_font_btn_con">
+                                        <a class="font_select san_ sanSerif" href="#">Aa</a>
+                                        <a class="san_ Serif" href="#">Aa</a>
+                                    </div>
+                                </div>
+                                <a class="app04_btn_in app04_font" href="#"><img src="./asset/app/app04/app04_btn01.png" alt="icon" width="14.2"/></a> 
+                            </div>
+                            <div class="app04_btn app04_btn02">
+                                <div class="app04_btn_this app04_color_this"></div>
+                                <div class="app04_color_btn">
+                                    <div class="app04_color_btn_con">
+                                        <a class="color01 a04C color_select" href="#"></a>
+                                        <a class="color02 a04C" href="#"></a>
+                                        <a class="color03 a04C" href="#"></a>
+                                        <a class="color04 a04C" href="#"></a>
+                                    </div>
+                                </div>
+                                <a class="app04_btn_in app04_color" href="#"><img src="./asset/app/app04/app04_btn02.png" alt="icon" width="16.69"/></a>
+                                
+                            </div>
                         </div>
-                        <p>마우스를 스크롤해서 모먼트립 시작하기</p>
+                        <div class="app04_flex">
+                            <div class="app04_flex_con">
+                                <div class="app04_left_img"></div>
+                                <div class="app04_content">
+                                    <div class="app04_plusImg">
+                                        <img class="app04_addImg" src="./asset/app/app04/app04_add.png" alt="addImg" width="117"/>
+                                        <div class="app04_plus_btn_con">
+                                            <div class="app04_plus_this"></div>
+                                            <a class="app04_plus_btn" href="#" alt="+버튼" target="_self">
+                                                <div class="">선</div>
+                                                <div class="">선</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="app04_text">
+                                        <p class="app04_title">질문 기록 제목</p>
+                                        <div class="app04_praph">
+                                            <p class="app04_praphR">내용을 입력해주세요.</p>
+                                            <hr/>
+                                            <p class="app04_praphR">&nbsp</p>
+                                            <hr/>
+                                            <p class="app04_praphR">&nbsp</p>
+                                            <hr/>
+                                            <p class="app04_praphR">&nbsp</p>
+                                            <hr/>
+                                        </div>
+                                    </div>
+                                    <img class="app04_qr" src="./asset/app/app04/app04_Qr.png" alt="qr코드" width="18"/>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
+                <img class="icon icon05" src="./asset/icon/icon05.png" width="64px"/>
+                <div class="app05">
+                    <div class="service_intro service05_intro01">
+                        <h3>여행의 추억을 사람들과 <span>공유</span>하세요</h3>
+                    </div>
+                    <div class="service_intro service05_intro02">
+                        <dl>
+                            <dt><span>디지털</span> 기록물 공유</dt>
+                            <dd>
+                                다른 사용자들의 인기 기록물을 확인하여<br/>
+                                새로운 순간들을 만나보세요.
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="service_intro service05_intro03">
+                        <dl>
+                            <dt><span>아날로그</span> 기록물 공유</dt>
+                            <dd>
+                                자신의 아날로그 기록물을 다른 사용자들과 공유하고<br/>
+                                마음에 드는 아날로그 기록물을 구입할 수 있어요.
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="app05_flex">
+                        <div class="app05_display">
+                            <video class="app05_video01" src="./asset/app/app05/app05_video01.mp4" loop muted></video>
+                            <video class="app05_video02" src="./asset/app/app05/app05_video02.mp4" loop muted></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="service_intro service02_intro01">
+                    <dl>
+                        <dt><span>질문</span>으로 기록해보세요</dt>
+                        <dd>
+                            랜덤한 순간에 질문을 보내주어<br/>
+                            소중한 순간들을 기록 할 수 있도록 합니다.
+                        </dd>
+                    </dl>
+                </div>
+                <div class="cha_bub cha01_bub">
+                    <img class="prof01" src="./asset/profile/profile01.png" alt="주인공프로필" width="54" height="54"/>
+                    <div>
+                        <p>
+                            이번 여행에서 바쁜 일상속에서<br/>
+                            찾는 여유로움을 느끼고 싶어요. 
+                        </p>
+                    </div>
+                </div>
+                <!--설명 및 인터랙션 설명 기입-->
                 <h2 class="titleAll"><span>모먼트립</span>이 필요한 사람들은?</h2>
             </div>
             <div class="fixed_character">
                 <div class="ground">
-                    땅
-                    <hr class="ground_dashed"/>
+                    <img class="section09_sanmi" src="./asset/motion/sanmi/sanmi.png" alt="산미" width="306"/>
+                    <div class="section09_book_con">
+                        <img class="section09_book" src="./asset/motion/section09book/book_000.png" alt="책" width="186.03"/>
+                    </div>
+                    <div class="last_records_con">
+                        <img class="last_cas la_fix" src="./asset/lastSection/la_cas.png" alt="카세트" width="165.23"/>
+                        <img class="last_pic la_fix" src="./asset/lastSection/la_pic.png" alt="엽서" width="163.82"/>
+                        <img class="last_stic la_fix" src="./asset/lastSection/la_stic.png" alt="스티커" width="101"/>
+                        <img class="last_lp la_fix" src="./asset/lastSection/la_lp.png" alt="엘피" width="335.93"/>             
+                        <img class="last_book" src="./asset/lastSection/la_book.png" alt="책" width="320"/>
+                        <img class="last_shadow" src="./asset/lastSection/la_shadow.png" alt="그림자" width="838.05"/>
+                        <div class="last_book_cover"></div>
+                    </div>
                 </div>
                 <figure class="main_character_con">
                     <div class="cha_shadow">주인공 그림자</div>
@@ -97,6 +680,12 @@
                         <img class="grass" src="./asset/environment/grass01.png" alt="grass01" height="126.07"/>
                         <img class="grass" src="./asset/environment/grass05.png" alt="grass05" height="76.51"/>
                         <img class="grass" src="./asset/environment/grass06.png" alt="grass06" height="96.16"/>
+                    </article>
+                    <article class="leaf_sec01">
+                        <img class="leaf" src="./asset/environment/leaf01.png" alt="leaf" height="26"/>
+                        <img class="leaf" src="./asset/environment/leaf01.png" alt="leaf" height="20"/>
+                        <img class="leaf" src="./asset/environment/leaf01.png" alt="leaf" height="16"/>
+                        <img class="leaf" src="./asset/environment/leaf02.png" alt="leaf" height="14"/>
                     </article>
                     <img class="mainGround" src="./asset/background/mainGround.png" alt="메인 땅" width="2876.62" height="217.33"/>
                 </section>
@@ -136,7 +725,6 @@
                 <section class="section03">
                     <article class="background_sec03">
                         <img class="mountain_namsan" src="./asset/background/mountain_namsan.png" alt="남산타워" width="1852.16"/>
-                        <img class="plane" src="./asset/background/plane.png" alt="plane" width="198.13"/>
                     </article>
                     <div class="yeahna_con">
                         <div class="cha_bub cha03_bub">
@@ -192,12 +780,19 @@
                     <article class="background_sec04">
                         <img class="mountain_sec04" src="./asset/background/mountain.png" alt="산배경" width="1852.16"/>
                     </article>
+                    
                     <article class="mainVideo_intro">
                         <h2>
                             <span>순간</span>을<br/>
                             <span>생생</span>하게<br/>
                             <span>간직</span>하는
                         </h2>
+                        <div class="leaf_sec04">
+                            <img class="leaf" src="./asset/environment/leaf01.png" alt="leaf" height="26"/>
+                            <img class="leaf" src="./asset/environment/leaf01.png" alt="leaf" height="20"/>
+                            <img class="leaf" src="./asset/environment/leaf01.png" alt="leaf" height="16"/>
+                            <img class="leaf" src="./asset/environment/leaf02.png" alt="leaf" height="14"/>
+                        </div>
                     </article>
                 </section>
                 <section class="section05">
@@ -225,6 +820,10 @@
                             <img class="grass" src="./asset/environment/grass03.png" alt="grass03" height="93.12"/>
                             <img class="grass" src="./asset/environment/grass02.png" alt="grass02" height="93.12"/>
                             <img class="grass" src="./asset/environment/grass01.png" alt="grass01" height="108.39"/>
+
+                            <img class="duck01" src="./asset/environment/duck.gif" alt="오리" height="69.8345 "/>
+                            <img class="duck02" src="./asset/environment/duck.gif" alt="오리" height="52"/>
+                            <img class="duck03" src="./asset/environment/duck.gif" alt="오리" height="52"/>
                         </div>
                     </article>
                 </section>
@@ -233,10 +832,199 @@
                         <h3 class="serviceText">여행하기 좋은 한적한 <span>오늘</span></h3>
                         <p>2020.09.03</p>
                     </article>
-                    <article class="service01">
+                    <article class="service01 service">
                         <p class="serviceN">01</p>
                         <h3 class="serviceT">여행 기록 추가</h3>
                     </article>
+                    <article class="service_intro service01_intro01">
+                        <dl>
+                            <dt><span>지난</span> 순간 기록</dt>
+                            <dd>
+                                오늘 날짜를 기준으로 이전 날짜를<br/>
+                                선택하는 지난 순간을 기록할 수 있습니다.
+                            </dd>
+                        </dl>
+                    </article>
+                    <article class="service_intro service01_intro02">
+                        <dl>
+                            <dt><span>앞으로</span>의 순간 기록</dt>
+                            <dd>
+                                오늘 날짜를 기준으로 앞으로의 날짜를<br/>
+                                선택하면 앞으로의 순간을 기록할 수 있습니다.
+                            </dd>
+                        </dl>
+                    </article>
+                </section>
+                <section class="section07">
+                    <article class="mall_con_sec07">
+                        <img class="mall01" src="./asset/bulidng/mall01.png" alt="상가" height="244.2523"/>
+                        <img class="lamp01" src="./asset/bulidng/lamp.png" alt="가로등" height="236.145"/>
+                        <img class="mall02" src="./asset/bulidng/mall02.png" alt="상가" height="301.0175"/>
+                        <img class="lamp02" src="./asset/bulidng/lamp.png" alt="가로등" height="236.145"/>
+                        <img class="mall03" src="./asset/bulidng/mall03.png" alt="상가" height="270.1331"/>
+                        <img class="lamp03" src="./asset/bulidng/lamp.png" alt="가로등" height="236.145"/>
+                        <img class="lamp04" src="./asset/bulidng/lamp.png" alt="가로등" height="236.145"/>
+                        <img class="mall04" src="./asset/bulidng/mall04.png" alt="상가" height="428.1584"/>
+                    </article>
+                    <article class="service02 service">
+                        <p class="serviceN">02</p>
+                        <h3 class="serviceT">랜덤 질문 기록</h3>
+                    </article>
+                    <div class="music_con">
+                        <img src="./asset/motion/music/music.gif" alt="음악가들" width="430"/>
+                    </div>
+                </section>
+                <section class="section08">
+                    <article class="background_sec08">
+                        <img class="mountain mountain_sec08" src="./asset/background/mountain.png" alt="산배경" width="1852.16"/>
+                    </article>
+                    <article class="service03 service">
+                        <p class="serviceN">03</p>
+                        <h3 class="serviceT">기록 보관함</h3>
+                    </article>
+                    <article class="records_sec08">
+                        <div class="records_sec08_con">
+                            <div class="recordsEl_con recordsEl_opacity"><img class="recordsEl" src="./asset//app/records/sec08_01.png" alt="기록물" width="130"/></div>
+                            <div class="recordsEl_con recordsEl_opacity"><img class="recordsEl" src="./asset//app/records/sec08_02.png" alt="기록물" width="130"/></div>
+                            <div class="recordsEl_con recordsEl_opacity"><img class="recordsEl" src="./asset//app/records/sec08_03.png" alt="기록물" width="130"/></div>
+                            <div class="recordsEl_con"><img class="recordsEl" src="./asset//app/records/sec08_04.png" alt="기록물" width="130"/></div>
+                            <div class="recordsEl_con"><img class="recordsEl" src="./asset//app/records/sec08_03.png" alt="기록물" width="130"/></div>
+                            <div class="recordsEl_con"><img class="recordsEl" src="./asset//app/records/sec08_01.png" alt="기록물" width="130"/></div>
+                            <div class="recordsEl_con"><img class="recordsEl" src="./asset//app/records/sec08_02.png" alt="기록물" width="130"/></div>
+                        </div>
+                    </article>
+                    <article class="service_intro service03_intro01">
+                        <dl>
+                            <dt>소소하지만 <span>소중</span>한 순간들</dt>
+                            <dd>
+                                기록한 질문들을 확인 할 수 있는 기록보관함입니다.<br/>
+                                디지털과 아날로그 기록물들을 확인할 수 있습니다.
+                            </dd>
+                        </dl>
+                    </article>
+                    <article class="service_intro service03_intro02">
+                        <p>
+                            기록물을 클릭하면 해당 기록물의<br/>질문들을 확인할 수 있습니다.
+                        </p>
+                    </article>
+                </section>
+                <section class="section09">
+                    <article class="service04 service">
+                        <p class="serviceN">04</p>
+                        <h3 class="serviceT">기록물 제작하기</h3>
+                    </article>
+                    <article class="service_intro service04_intro01">
+                        <dl>
+                            <dt>추억을 <span>간직</span>하세요</dt>
+                            <dd>
+                                포토북, 카세트, LP, 엽서, 스티커로<br/>
+                                아날로그 기록물을 제작하여 간직할 수 있습니다.
+                            </dd>
+                        </dl>
+                    </article>
+                    <article class="service_intro service04_intro02">
+                        <dl>
+                            <dt class="app04_service_align"><span class="app04_num"><p>1</p></span><span>기록을 페이지에 추가</span>해보세요</dt>
+                            <dd class="app04_service_align02">
+                                기록물의 질문을 추가하여 페이지를 채워 나갈 수 있습니다.
+                            </dd>
+                        </dl>
+                    </article>
+                    <article class="service_intro service04_intro03">
+                        <dl>
+                            <dt class="app04_service_align"><span class="app04_num"><p>2</p></span><span>폰트</span>를 바꿔보세요</dt>
+                            <dd class="app04_service_align02">
+                                자신의 책에 맞는 고딕과 명조체를 선택해서 폰트를 지정 할 수 있습니다.
+                            </dd>
+                        </dl>
+                    </article>
+                    <article class="service_intro service04_intro04">
+                        <dl>
+                            <dt class="app04_service_align"><span class="app04_num"><p>3</p></span><span>원하는 컬러</span>를 선택하세요</dt>
+                            <dd class="app04_service_align02">
+                                텍스트를 원하는 컬러로 선택하여 책을 받아 볼 수 있습니다.
+                            </dd>
+                        </dl>
+                    </article>
+                </section>
+                <section class="section10">
+                    <article class="service05 service">
+                        <p class="serviceN">05</p>
+                        <h3 class="serviceT">기록물 공유하기</h3>
+                    </article>
+                    <article class="section10_balloon_con">
+                        <div class="balloon"><img class="balloonIn" src="./asset/background/balloon01.png" alt="열기구" width="58.12"/></div>
+                        <div class="balloon"><img class="balloonIn" src="./asset/background/balloon02.png" alt="열기구" width="125.04"/></div>
+                        <div class="balloon"><img class="balloonIn" src="./asset/background/balloon03.png" alt="열기구" width="102.22"/></div>
+                        <div class="balloon"><img class="balloonIn" src="./asset/background/balloon04.png" alt="열기구" width="43.07"/></div>
+                        <div class="amusement_park_con">
+                            <div class="roller_con">
+                                <img class="roller" src="./asset/background/roller.gif" alt="롤러코스터" width="2700"/>
+                            </div>
+                            <div class="bush_con">
+                                <img class="bush01" src="./asset/environment/bush01.png" alt="열기구" width="100.3829"/>
+                                <img class="bush02" src="./asset/environment/bush02.png" alt="열기구" width="47.3826"/>
+                                <img class="bush03" src="./asset/environment/bush03.png" alt="열기구" width="93.6677"/>
+                                <img class="bush04" src="./asset/environment/bush04.png" alt="열기구" width="46.1335"/>
+                            </div>
+                            <div class="wheel_con">
+                                <img class="wheel02" src="./asset/bulidng/wheel02.png" alt="대관람차" width="252.7093"/>
+                                <div class="wheel_box">
+                                    <img class="wheel01" src="./asset/bulidng/wheel01.png" alt="대관람차" width="514.7858"/>
+                                    <img class="wheelIn wheelIn01" src="./asset/bulidng/wheel03.png" alt="대관람차" width="63.2288"/>
+                                    <img class="wheelIn wheelIn02" src="./asset/bulidng/wheel04.png" alt="대관람차탑승" width="63.2288"/>
+                                    <img class="wheelIn wheelIn03" src="./asset/bulidng/wheel03.png" alt="대관람차탑승" width="63.2288"/>
+                                    <img class="wheelIn wheelIn04" src="./asset/bulidng/wheel04.png" alt="대관람차탑승" width="63.2288"/>
+                                    <img class="wheelIn wheelIn05" src="./asset/bulidng/wheel03.png" alt="대관람차탑승" width="63.2288"/>
+                                    <img class="wheelIn wheelIn06" src="./asset/bulidng/wheel04.png" alt="대관람차탑승" width="63.2288"/>
+                                    <img class="wheelIn wheelIn07" src="./asset/bulidng/wheel03.png" alt="대관람차탑승" width="63.2288"/>
+                                    <img class="wheelIn wheelIn08" src="./asset/bulidng/wheel04.png" alt="대관람차탑승" width="63.2288"/>
+                                </div>
+                            </div>
+                            <div class="horse_con">
+                                <div class="horse_box">
+                                    <div class="horse_set10 horse_set">
+                                        <img class="horsebar" src="./asset/bulidng/horsebar.png" alt="회전목마바" height="167.7317"/>
+                                        <img class="horse01 horse" src="./asset/bulidng/horse03.png" alt="목마" width="108.708"/>
+                                    </div>
+                                    <div class="horse_set01 horse_set">
+                                        <img class="horsebar" src="./asset/bulidng/horsebar.png" alt="회전목마바" height="167.7317"/>
+                                        <img class="horse01_1 horse" src="./asset/bulidng/horse03.png" alt="목마" width="108.708"/>
+                                    </div>
+                                    <img class="horsePiller" src="./asset/bulidng/horsepillar.png" alt="회전목마기둥" width="20.3758"/>
+                                    <div class="horse_set02 horse_set">
+                                        <img class="horsebar" src="./asset/bulidng/horsebar.png" alt="회전목마바" height="167.7317"/>
+                                        <img class="horse02_2 horse" src="./asset/bulidng/horse02.png" alt="목마" width="39.3209"/>
+                                    </div>
+                                    <div class="horse_set02_2 horse_set">
+                                        <img class="horsebar" src="./asset/bulidng/horsebar.png" alt="회전목마바" height="167.7317"/>
+                                        <img class="horse02 horse" src="./asset/bulidng/horse02.png" alt="목마" width="39.3209"/>
+                                    </div>
+                                    <div class="horse_set03 horse_set">
+                                        <img class="horsebar" src="./asset/bulidng/horsebar.png" alt="회전목마바" height="167.7317"/>
+                                        <img class="horse03 horse" src="./asset/bulidng/horse01.png" alt="목마" width="133.2289"/>
+                                    </div>
+                                    <div class="horse_set04 horse_set">
+                                        <img class="horsebar" src="./asset/bulidng/horsebar.png" alt="회전목마바" height="167.7317"/>
+                                        <img class="horse04 horse" src="./asset/bulidng/horse01.png" alt="목마" width="133.2289"/>
+                                    </div>
+                                </div>
+                                <img class="horseTop" src="./asset/bulidng/horsetop.png" alt="회전목마지붕" width="403.5463"/>
+                                <img class="horseBottom" src="./asset/bulidng/horsebottom.png" alt="회전목마바닥" width="404.87"/>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="last_section">
+                    <article class="last_slogan_con">
+                        <div class="last_logo_con">
+                            <img class="last_logo" src="./asset/momentrip/logo.png" alt="logo" width="42.13" height="42.13"/>
+                            <img class="last_logo_text" src="./asset/momentrip/textLogo.png" alt="logotext" width="164.42"/>
+                        </div>
+                        <h3 class="last_slogan"><span>순간</span>을 기록하고,</h3>
+                        <h3 class="last_slogan"><span>소중</span>한 추억들을 간직하세요.</h3>
+                    </article>
+                    <p class="last_inform">여행의 특별한 순간을 기록해주는 어플리케이션 : <span>MOMENTRIP</span></p>
                 </section>
             </div>
         </main>
